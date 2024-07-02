@@ -1,0 +1,172 @@
+body {
+  background-color: #000000;
+  color: #fff8f8;
+  font-family: 'Roboto', sans-serif;
+}
+
+.card-filme {
+  /* background-color: #6c6b6b; */
+  color: #fcfcfc;
+  /* width: 20%; */
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  text-align: center;
+}
+
+
+.card-filme img{
+  width: 400px;
+  height: 500px;
+}
+
+.card-filme:hover {
+  transition: 2s;
+}
+
+.card-filme:hover.raiva{
+  background-color: rgb(255, 0, 0);
+}
+
+.card-filme:hover.alegria{
+  background-color: rgb(255, 255, 0);
+}
+
+.card-filme:hover.tristeza{
+  background-color: rgb(0, 68, 255);
+}
+
+.card-filme:hover.ansiedade{
+  background-color: rgb(255, 102, 0);
+}
+
+.card-filme:hover.tedio{
+  background-color: rgb(17, 0, 255);
+}
+
+.card-filme:hover.inveja{
+  background-color: rgb(0, 247, 255);
+}
+
+.card-filme:hover.medo{
+  background-color: rgb(183, 0, 255);
+}
+
+.card-filme:hover.vergonha{
+  background-color: rgb(255, 0, 221);
+}
+
+
+.card-filme.alegria.selecionado {
+  background-color: rgb(204, 191, 9);
+}
+
+
+.card-filme.ansiedade.selecionado {
+  background-color: rgb(207, 86, 5);
+}
+
+.card-filme.inveja.selecionado {
+  background-color: rgb(3, 219, 219);
+}
+
+.card-filme.tristeza.selecionado {
+  background-color: rgb(3, 61, 219);
+}
+
+.card-filme.tedio.selecionado {
+  background-color: rgb(43, 3, 219);
+}
+
+.card-filme.raiva.selecionado {
+  background-color: rgb(219, 3, 3);
+}
+
+.card-filme.vergonha.selecionado {
+  background-color: rgb(219, 3, 154);
+}
+.card-filme.medo.selecionado {
+  background-color: rgb(140, 3, 219);
+}
+.section-itens {
+  display: flex;
+  justify-content: space-around;
+}
+
+h3{
+  margin: 0;
+  margin-top: 10px;
+}
+
+.sub-title {
+  border-left: rgb(7, 6, 6) solid 4px;
+  padding-left: 8px;
+}
+
+.titulo-card {
+  display: flex;
+  justify-content: end;
+  position: relative;
+}
+
+.titulo-card .fa-star {
+  position: absolute;
+  filter: drop-shadow(1px 0px 7px #fff);
+}
+
+.card-filme {
+  border-radius: 10px;
+  position: relative;
+}
+
+.card-filme .card-desc {
+  display: none;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+
+}
+
+.card-filme.selecionado .card-desc {
+  position: absolute;
+  display: flex; 
+  align-items: center;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+
+  font-size: larger;
+}
+
+.card-filme img {
+  visibility: visible;
+}
+
+.card-filme.selecionado img {
+  visibility: hidden;
+}
+
+/**************RESPONSIVIDADE************/
+@media screen and (max-width: 600px) {
+  .card-filme{
+    width: 45%;
+    margin-top: 10px;
+  }
+
+  .section-itens{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .card-filme img{
+    height: auto;
+    width: 100%;
+  }
+
+  .card-filme.selecionado .card-desc {
+    font-size: small;
+  }
+}
+
